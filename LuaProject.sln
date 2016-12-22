@@ -3,10 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua5.1.4", "src\lua5.1.4\lua5.1.4.vcxproj", "{CB6A47D9-E76A-4D6B-867E-24FD46D9233F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "master", "src\master\master.vcxproj", "{1178467B-38FC-4591-89F9-51D394FA8A7C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CB6A47D9-E76A-4D6B-867E-24FD46D9233F} = {CB6A47D9-E76A-4D6B-867E-24FD46D9233F}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "src\core\core.vcxproj", "{1178467B-38FC-4591-89F9-51D394FA8A7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
