@@ -1,2 +1,2 @@
 # LuaProject
-study lua
+study lua 5.1.4 CAPI
