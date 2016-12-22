@@ -5,3 +5,7 @@
 /src/lua5.1.4/lua5.1.4.vcxproj.user
 /LuaProject.v11.suo
 /bin
+/.vs/LuaProject/v14/*.suo
+/*.opendb
+/*.db
+/src/core/*.user
