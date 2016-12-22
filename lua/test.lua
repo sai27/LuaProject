@@ -7,4 +7,9 @@ function show()
     end  
 end  
   
-show()  
+show()
+
+local b = BinaryArray.New(1000)
+
+BinaryArray.Set(b, 1,true)
+print(BinaryArray.Get(b,1))
