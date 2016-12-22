@@ -1,2 +1,6 @@
 /LuaProject.opensdf
 /LuaProject.sdf
+/src/core/master.vcxproj.user
+/src/core/master.vcxproj.filters
+/src/lua5.1.4/lua5.1.4.vcxproj.user
+/LuaProject.v11.suo
