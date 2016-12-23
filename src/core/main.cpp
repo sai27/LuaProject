@@ -10,6 +10,11 @@ int main()
 
 //	BinaryArray_Reg::RunTest(L);
     
+	if (luaL_dofile(L, "../../lua/grammar.lua"))
+	{
+		printf("%s\n", lua_tostring(L, -1));
+	}
+
     lua_close(L);
 
 	system("pause");
