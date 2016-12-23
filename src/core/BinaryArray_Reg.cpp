@@ -84,3 +84,12 @@ void BinaryArray_Reg::Reg(lua_State* L)
 	luaL_register(L, "BinaryArray", binaryArray_Lib);
 }
 
+void BinaryArray_Reg::RunTest(lua_State* L)
+{
+	Reg(L);
+	if (luaL_dofile(L, "../../lua/userdata.lua"))
+	{
+		printf("%s\n", lua_tostring(L, -1));
+	}
+}
+

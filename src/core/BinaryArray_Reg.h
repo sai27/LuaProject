@@ -10,4 +10,5 @@ private:
 
 public:
 	static void Reg(lua_State* L);
+	static void RunTest(lua_State* L);
 };
