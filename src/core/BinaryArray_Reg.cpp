@@ -1,3 +1,4 @@
+#include "typedef.h"
 #include "lua.hpp"
 #include "BinaryArray.h"
 #include "BinaryArray_Reg.h"

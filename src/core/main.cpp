@@ -10,7 +10,7 @@ int main()
 	BinaryArray_Reg::Reg(L);
     if (luaL_dofile(L, "../../lua/test.lua"))
 	{
-		printf("%s",lua_tostring(L,-1));
+		printf("%s\n",lua_tostring(L,-1));
 	}
     lua_close(L);
 

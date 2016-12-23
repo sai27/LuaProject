@@ -1,5 +1,4 @@
 #pragma once
-#include "lua.hpp"
 
 class BinaryArray_Reg
 {

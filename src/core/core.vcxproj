@@ -89,6 +89,7 @@
     <ClInclude Include="BinaryArray.h" />
     <ClInclude Include="BinaryArray_Reg.h" />
     <ClInclude Include="lua.hpp" />
+    <ClInclude Include="typedef.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\lua\test.lua" />

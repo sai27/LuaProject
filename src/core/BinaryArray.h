@@ -8,7 +8,7 @@ public:
 	void Init(int size)
 	{
 		m_size = size;
-		m_values = new unsigned int[size / sizeof(int) + 1];
+		m_values = new uint32[size / sizeof(int) + 1];
 		memset(m_values, 0, sizeof(m_values));
 	}
 
@@ -57,6 +57,6 @@ public:
 	}
 
 private:
-	unsigned int*	m_values;
+	uint32*			m_values;
 	int				m_size;
 };
