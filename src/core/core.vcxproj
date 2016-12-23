@@ -94,7 +94,7 @@
     <ClInclude Include="typedef.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\lua\test.lua" />
+    <None Include="..\..\lua\userdata.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

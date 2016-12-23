@@ -9,3 +9,4 @@
 /*.opendb
 /*.db
 /src/core/*.user
+/src/core/core.vcxproj.filters

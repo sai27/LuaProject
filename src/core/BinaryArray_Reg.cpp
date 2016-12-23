@@ -12,7 +12,7 @@ int BinaryArray_Reg::BinaryArray_New(lua_State* L)
 	BinaryArray* binaryArray = (BinaryArray*)lua_newuserdata(L, sizeof(BinaryArray));
 	binaryArray->Init(size);
 	luaL_getmetatable(L, "BinaryArrayMetaTable");
-	Debug::StackDump(L);
+	// Debug::StackDump(L);
 	lua_setmetatable(L, 2);
 	return 1;
 }
@@ -65,14 +65,22 @@ int BinaryArray_Reg::BinaryArray_Count(lua_State* L)
 
 void BinaryArray_Reg::Reg(lua_State* L)
 {
-	const struct luaL_Reg binaryArray_Lib [] = {
-		{"New", BinaryArray_New},
+	const struct luaL_Reg binaryArrayMetaTable_Lib [] = {
 		{"Set", BinaryArray_Set},
 		{"Get", BinaryArray_Get},
 		{"Count", BinaryArray_Count},
 		{NULL, NULL}
 	};
+
+	const struct luaL_Reg binaryArray_Lib[] = {
+		{ "New", BinaryArray_New },
+		{ NULL, NULL }
+	};
 	luaL_newmetatable(L, "BinaryArrayMetaTable");
+	lua_pushvalue(L, -1);
+	lua_setfield(L, -2, "__index");
+	luaL_register(L, NULL, binaryArrayMetaTable_Lib);
+
 	luaL_register(L, "BinaryArray", binaryArray_Lib);
 }
 
