@@ -84,11 +84,13 @@
     <ClCompile Include="BinaryArray.cpp" />
     <ClCompile Include="BinaryArray_Reg.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Debug.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryArray.h" />
     <ClInclude Include="BinaryArray_Reg.h" />
     <ClInclude Include="lua.hpp" />
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="typedef.h" />
   </ItemGroup>
   <ItemGroup>

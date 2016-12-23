@@ -11,5 +11,6 @@ show()
 
 local b = BinaryArray.New(1000)
 
+print(b)
 BinaryArray.Set(b, 5,true)
-print(BinaryArray.Get(b,-5))
+print(BinaryArray.Get(b,5))

@@ -2,6 +2,7 @@
 #include "lua.hpp"
 #include "BinaryArray.h"
 #include "BinaryArray_Reg.h"
+#include "Debug.h"
 
 int BinaryArray_Reg::BinaryArray_New(lua_State* L)
 {
@@ -10,13 +11,15 @@ int BinaryArray_Reg::BinaryArray_New(lua_State* L)
 
 	BinaryArray* binaryArray = (BinaryArray*)lua_newuserdata(L, sizeof(BinaryArray));
 	binaryArray->Init(size);
-
+	luaL_getmetatable(L, "BinaryArrayMetaTable");
+	Debug::StackDump(L);
+	lua_setmetatable(L, 2);
 	return 1;
 }
 
 int BinaryArray_Reg::BinaryArray_Set(lua_State* L)
 {
-	BinaryArray* binaryArray = (BinaryArray*)lua_touserdata(L, 1);
+	BinaryArray* binaryArray = (BinaryArray*)luaL_checkudata(L, 1, "BinaryArrayMetaTable");
 	int index = luaL_checkint(L,2) - 1;
 	luaL_checkany(L, 3);
 
@@ -36,7 +39,7 @@ int BinaryArray_Reg::BinaryArray_Set(lua_State* L)
 
 int BinaryArray_Reg::BinaryArray_Get(lua_State* L)
 {
-	BinaryArray* binaryArray = (BinaryArray*)lua_touserdata(L, 1);
+	BinaryArray* binaryArray = (BinaryArray*)luaL_checkudata(L, 1, "BinaryArrayMetaTable");
 	int index = luaL_checkint(L,2) - 1;
 
 	luaL_argcheck(L, binaryArray != NULL, 1, "'array' expected");
@@ -51,7 +54,7 @@ int BinaryArray_Reg::BinaryArray_Get(lua_State* L)
 
 int BinaryArray_Reg::BinaryArray_Count(lua_State* L)
 {
-	BinaryArray* binaryArray = (BinaryArray*)lua_touserdata(L, 1);
+	BinaryArray* binaryArray = (BinaryArray*)luaL_checkudata(L, 1, "BinaryArrayMetaTable");
 
 	luaL_argcheck(L, binaryArray != NULL, 1, "'array' expected");
 
@@ -69,7 +72,7 @@ void BinaryArray_Reg::Reg(lua_State* L)
 		{"Count", BinaryArray_Count},
 		{NULL, NULL}
 	};
-
+	luaL_newmetatable(L, "BinaryArrayMetaTable");
 	luaL_register(L, "BinaryArray", binaryArray_Lib);
 }
 
