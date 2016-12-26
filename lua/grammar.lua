@@ -43,3 +43,14 @@ end
 for i,v in mpairs1(s) do
 	print(i..":"..v)
 end
+
+function init()
+	function define()
+	--	error("invalid input")
+		print(traceback())
+		print(debug.traceback())
+	end
+end
+init()
+define()
+

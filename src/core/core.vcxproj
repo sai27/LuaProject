@@ -94,6 +94,7 @@
     <ClInclude Include="typedef.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\lua\debug.lua" />
     <None Include="..\..\lua\grammar.lua" />
     <None Include="..\..\lua\userdata.lua" />
   </ItemGroup>
