@@ -94,8 +94,11 @@
     <ClInclude Include="typedef.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\lua\class.lua" />
     <None Include="..\..\lua\debug.lua" />
+    <None Include="..\..\lua\env.lua" />
     <None Include="..\..\lua\grammar.lua" />
+    <None Include="..\..\lua\module.lua" />
     <None Include="..\..\lua\userdata.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
