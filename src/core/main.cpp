@@ -10,7 +10,7 @@ int main()
 
 //	BinaryArray_Reg::RunTest(L);
     
-	if (luaL_dofile(L, "../../lua/class.lua"))
+	if (luaL_dofile(L, "../../lua/coroutine.lua"))
 	{
 		printf("%s\n", lua_tostring(L, -1));
 	}
